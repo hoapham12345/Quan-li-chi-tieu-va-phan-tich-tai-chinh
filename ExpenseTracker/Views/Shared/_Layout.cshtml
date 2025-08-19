@@ -1,0 +1,104 @@
+﻿@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ExpenseTracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background: #f5f7fb;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background: #f0f6ff;
+            border-right: 1px solid #e6eefc;
+        }
+
+        .card-sm {
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,.03);
+        }
+
+        .nav-link.active {
+            background: rgba(0,0,0,.03);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 sidebar p-3">
+                <h4 class="mb-4">Quản lý chi tiêu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link @(currentController=="Dashboard" ? "active" : "")"
+                           href="/Dashboard/Index">Bảng điều khiển</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(currentController=="Transactions" ? "active" : "")"
+                           href="@Url.Action("Index","Transactions")">
+                            Sổ giao dịch
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(currentController=="Reports" ? "active" : "")"
+                           href="@Url.Action("Index","Reports")">Báo cáo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(currentController=="Budgets" ? "active" : "")"
+                           href="@Url.Action("Index","Budgets")">Ngân sách</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+            <main role="main" class="col-md-10 p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>@ViewData["Title"]</h2>
+                    <div>
+                        @if (User?.Identity?.IsAuthenticated ?? false)
+                        {
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @("Xin chào, " + (User.Identity!.Name ?? "Người dùng"))
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Auth" asp-action="ChangePassword">Đổi mật khẩu</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <form asp-controller="Auth" asp-action="Logout" method="post" class="px-2">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-outline-danger w-100">Đăng xuất</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <a class="btn btn-sm btn-primary me-2" asp-controller="Auth" asp-action="Login">Đăng nhập</a>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Auth" asp-action="Register">Đăng ký</a>
+                        }
+                    </div>
+                </div>
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

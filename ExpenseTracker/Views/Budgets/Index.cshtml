@@ -1,0 +1,230 @@
+﻿@using System.Globalization
+@using System.Text.Json
+
+@model IEnumerable<ExpenseTracker.Models.Budget>
+
+@{
+    ViewData["Title"] = "Ngân sách";
+
+    var m = (int)ViewBag.Month;
+    var y = (int)ViewBag.Year;
+    var start = (DateTime)ViewBag.PeriodStart;
+    var end = (DateTime)ViewBag.PeriodEnd;
+
+    var spentMap = ViewBag.SpentMap as Dictionary<int, decimal> ?? new();
+    decimal totalBudget = Model.FirstOrDefault(b => b.CategoryId == null)?.Amount ?? 0m;
+    decimal totalSpent = ViewBag.TotalSpent ?? spentMap.Values.Sum();
+    decimal remainAll = totalBudget - totalSpent;
+
+    double percentUsed = totalBudget == 0 ? 0 : (double)(totalSpent / totalBudget * 100m);
+    var percentCss = percentUsed.ToString("0.##", CultureInfo.InvariantCulture);
+
+    // dữ liệu biểu đồ & gợi ý
+    var last6 = ViewBag.Last6 as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>(); // { Label, Percent }
+    decimal suggest = ViewBag.SuggestNextAmount ?? 0m;
+    DateTime ns = ViewBag.SuggestNextStart ?? DateTime.Today;
+    DateTime ne = ViewBag.SuggestNextEnd ?? DateTime.Today;
+    bool nextHas = ViewBag.NextHasBudget ?? false;
+}
+
+<div class="card-sm mb-3 p-3">
+    <form method="get" class="row g-2 align-items-end">
+        <div class="col-auto">
+            <label class="form-label mb-1">Tháng</label>
+            <select class="form-select" name="month">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    if (i == m)
+                    {
+                        <option value="@i" selected>@i</option>
+                    }
+                    else
+                    {
+                        <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col-auto">
+            <label class="form-label mb-1">Năm</label>
+            <input type="number" class="form-control" name="year" value="@y" />
+        </div>
+        <div class="col-auto">
+            <label class="form-label mb-1 d-block">&nbsp;</label>
+            <button class="btn btn-primary">Xem</button>
+            <a class="btn btn-success" asp-action="Create">Tạo ngân sách</a>
+        </div>
+        <div class="col-auto">
+            <label class="form-label mb-1 d-block">&nbsp;</label>
+            <form method="post" asp-action="Clone" class="d-inline">
+                <!-- vẫn trong form GET -->
+                <input type="hidden" name="fromMonth" value="@m" />
+                <input type="hidden" name="fromYear" value="@y" />
+                <input type="hidden" name="toMonth" value="@(m==12?1:m+1)" />
+                <input type="hidden" name="toYear" value="@(m==12?y+1:y)" />
+                <button type="submit"
+                        class="btn btn-outline-secondary"
+                        formaction="@Url.Action("Clone","Budgets")"
+                        formmethod="post">
+                    Nhân bản → tháng kế
+                </button>
+            </form>
+        </div>
+    </form>
+    <div class="mt-2 text-muted">
+        Khoảng: <strong>@start.ToString("dd/MM/yyyy")</strong> — <strong>@end.ToString("dd/MM/yyyy")</strong>
+    </div>
+</div>
+
+<!-- HÀNG CHÍNH: Trái = KPI + Bảng ; Phải = Lịch sử 6T + Gợi ý -->
+<div class="row g-3">
+    <!-- CỘT TRÁI (8/12) -->
+    <div class="col-lg-8">
+        <!-- 3 KPI NHỎ GỌN -->
+        <div class="row g-3 mb-3">
+            <div class="col-md-4">
+                <div class="card-sm kpi">
+                    <div class="text-muted">Ngân sách tổng</div>
+                    <h3>@string.Format("{0:N0} đ", totalBudget)</h3>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-success" style="width:@percentCss%"></div>
+                    </div>
+                    <small class="text-muted">Đã dùng: @string.Format("{0:N0} đ", totalSpent)</small>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-sm kpi">
+                    <div class="text-muted">Đã chi</div>
+                    <h3>@string.Format("{0:N0} đ", totalSpent)</h3>
+                    <small class="text-muted">= @percentUsed.ToString("0.0")% ngân sách</small>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-sm kpi">
+                    <div class="text-muted">Còn lại</div>
+                    <h3>@string.Format("{0:N0} đ", totalBudget - totalSpent)</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- BẢNG NGÂN SÁCH THEO DANH MỤC -->
+        <div class="card-sm">
+            <h5>Ngân sách theo danh mục</h5>
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Danh mục</th>
+                        <th class="text-end">Hạn mức</th>
+                        <th class="text-end">Đã chi</th>
+                        <th class="text-end">Còn lại</th>
+                        <th style="width:25%">Tiến độ</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr><td colspan="6" class="text-muted">Chưa có ngân sách trong kỳ này.</td></tr>
+                    }
+                    else
+                    {
+                        foreach (var b in Model)
+                        {
+                            decimal spent = b.CategoryId == null
+                            ? totalSpent
+                            : (spentMap.TryGetValue(b.CategoryId!.Value, out var v) ? v : 0m);
+
+                            var remain = b.Amount - spent;
+                            var pct = b.Amount == 0 ? 0 : (double)(spent / b.Amount * 100m);
+                            var pctCss = pct.ToString("0.##", CultureInfo.InvariantCulture);
+                            var badge = pct >= 100 ? "bg-danger" : (pct >= 90 ? "bg-warning text-dark" : "bg-success");
+
+                            <tr>
+                                <td>@(b.CategoryId == null ? "Tổng ngân sách" : b.Category?.Name)</td>
+                                <td class="text-end">@string.Format("{0:N0} đ", b.Amount)</td>
+                                <td class="text-end">@string.Format("{0:N0} đ", spent)</td>
+                                <td class="text-end">@string.Format("{0:N0} đ", remain)</td>
+                                <td>
+                                    <div class="progress" style="height:8px;">
+                                        <div class="progress-bar @badge" style="width:@pctCss%"></div>
+                                    </div>
+                                    <small class="text-muted">@pct.ToString("0.0")%</small>
+                                </td>
+                                <td class="text-end">
+                                    <a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@b.BudgetId">Sửa</a>
+                                    <form asp-action="Delete" method="post" class="d-inline" onsubmit="return confirm('Xoá ngân sách này?');">
+                                        <input type="hidden" name="id" value="@b.BudgetId" />
+                                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CỘT PHẢI (4/12) -->
+    <div class="col-lg-4">
+        <!-- Lịch sử 6 tháng (NHỎ, cùng hàng với KPI) -->
+        <div class="card-sm mb-3">
+            <h6 class="mb-2">Lịch sử 6 tháng</h6>
+            <div style="height:220px">
+                <canvas id="historyChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Gợi ý kỳ sau -->
+        <div class="card-sm">
+            <h6 class="mb-2">Gợi ý kỳ sau</h6>
+            <div class="d-flex align-items-baseline gap-3">
+                <div class="fs-3 fw-bold">@string.Format("{0:N0} đ", suggest)</div>
+                <div class="text-muted">(@ns.ToString("dd/MM/yyyy") — @ne.ToString("dd/MM/yyyy"))</div>
+            </div>
+            @if (!nextHas && suggest > 0)
+            {
+                <form asp-action="ApplySuggestion" method="post" class="mt-3">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="start" value="@ns.ToString("yyyy-MM-dd")" />
+                    <input type="hidden" name="end" value="@ne.ToString("yyyy-MM-dd")" />
+                    <input type="hidden" name="amount" value="@suggest" />
+                    <button class="btn btn-primary w-100">Áp dụng gợi ý</button>
+                </form>
+            }
+            else
+            {
+                <div class="mt-2 text-muted">Đã có ngân sách tổng cho kỳ sau hoặc chưa đủ dữ liệu.</div>
+            }
+        </div>
+    </div>
+</div>
+
+        
+@section Scripts {
+    <script>
+        const last6 = @Html.Raw(JsonSerializer.Serialize(
+                   (IEnumerable<dynamic>)last6,
+                   new JsonSerializerOptions { PropertyNamingPolicy = null }));
+
+        const labels = last6.map(x => x.Label);
+        const data   = last6.map(x => x.Percent);
+
+        const ctx = document.getElementById('historyChart')?.getContext('2d');
+        if (ctx) {
+          new Chart(ctx, {
+            type: 'bar',
+            data: { labels, datasets: [{ label: '% dùng ngân sách', data }] },
+            options: {
+              maintainAspectRatio: false,      // chiều cao 220px ở container
+              scales: { y: { beginAtZero: true, max: 100 } },
+              plugins: { legend: { display: true, position: 'top' } }
+            }
+          });
+        }
+    </script>
+}
+
+

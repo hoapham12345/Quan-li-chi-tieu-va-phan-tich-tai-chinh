@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ExpenseTracker.Models.Transaction>
+@{
+    ViewData["Title"] = "Sổ giao dịch";
+}
+<div class="d-flex justify-content-between mb-3">
+    <h4>Sổ giao dịch</h4>
+    <a class="btn btn-primary" href="@Url.Action("Create")">Thêm giao dịch</a>
+</div>
+
+<table class="table table-striped">
+    <thead><tr><th>Ngày</th><th>Ghi chú</th><th>Danh mục</th><th class="text-end">Số tiền</th></tr></thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.TransactionDate.ToString("yyyy-MM-dd")</td>
+                <td>@t.Note</td>
+                <td>@(t.Category?.Name ?? "Khác")</td>
+                <td class="text-end">@string.Format("{0:N0} đ", t.Amount)</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,644 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\migrations\\20250818091018_lastinitupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\migrations\\20250818091018_lastinitupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\budgetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\budgetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\auth\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\auth\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\utils\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\utils\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\auth\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\auth\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\auth\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\auth\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\services\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\services\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\budgets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\budgets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\budgets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\budgets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\budgets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\budgets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\reports\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\services\\financialanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\services\\financialanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\insight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\insight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\transactions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\transactions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\expensetracker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\expensetracker.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\views\\transactions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\views\\transactions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|c:\\users\\hoaph\\downloads\\expensetracker\\expensetracker\\expensetracker\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BDCCCED-EB2E-41C8-8109-396D59413396}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250818091018_lastinitupdate.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Migrations\\20250818091018_lastinitupdate.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Migrations\\20250818091018_lastinitupdate.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Migrations\\20250818091018_lastinitupdate.cs",
+              "RelativeToolTip": "ExpenseTracker\\Migrations\\20250818091018_lastinitupdate.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvxAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T09:10:20.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Program.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Program.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Program.cs",
+              "RelativeToolTip": "ExpenseTracker\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:30:15.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Data\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "ExpenseTracker\\Data\\DbSeeder.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:31:40.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
+              "RelativeDocumentMoniker": "ExpenseTracker\\appsettings.json",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
+              "RelativeToolTip": "ExpenseTracker\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-12T06:30:35.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\TransactionsController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:34:53.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:34:26.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BudgetsController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\BudgetsController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\BudgetsController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\BudgetsController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\BudgetsController.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAAACsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T09:37:18.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ExpenseTracker\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:31:22.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T08:52:54.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T07:09:04.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAUwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:33:08.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Auth\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\_AuthLayout.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Auth\\_AuthLayout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T07:20:41.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ClaimsExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Utils\\ClaimsExtensions.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Utils\\ClaimsExtensions.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Utils\\ClaimsExtensions.cs",
+              "RelativeToolTip": "ExpenseTracker\\Utils\\ClaimsExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:45:54.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Auth\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\ChangePassword.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Auth\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T07:02:47.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\User.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:32:10.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T06:36:09.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChangePasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Auth\\ChangePasswordViewModel.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Auth\\ChangePasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Auth\\ChangePasswordViewModel.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Auth\\ChangePasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:02:25.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-18T06:36:28.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:36:29.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Auth\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Auth\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Auth\\LoginViewModel.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Auth\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:00:13.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:00:17.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CurrentUser.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Services\\CurrentUser.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Services\\CurrentUser.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Services\\CurrentUser.cs",
+              "RelativeToolTip": "ExpenseTracker\\Services\\CurrentUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:32:18.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Reports\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Reports\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Reports\\Index.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Reports\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T08:53:48.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Budget.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Budget.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Budget.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Budget.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Budget.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:33:40.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Budgets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Index.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Budgets\\Index.cshtml",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAYwOMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T09:37:56.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Budgets\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Edit.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Budgets\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T09:38:44.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ExpenseTracker\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ExpenseTracker\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-15T02:12:00.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:37:38.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T07:10:23.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Create.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Budgets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Budgets\\Create.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Budgets\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T09:38:18.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FinancialAnalysisService.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Services\\FinancialAnalysisService.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Services\\FinancialAnalysisService.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Services\\FinancialAnalysisService.cs",
+              "RelativeToolTip": "ExpenseTracker\\Services\\FinancialAnalysisService.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAcwNgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T08:28:33.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Insight.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Insight.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Insight.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Insight.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Insight.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T08:26:57.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Transactions\\Create.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Transactions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Transactions\\Create.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Transactions\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:46:58.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:47:07.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:47:15.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ExpenseTracker",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+              "RelativeDocumentMoniker": "ExpenseTracker\\ExpenseTracker.csproj",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+              "RelativeToolTip": "ExpenseTracker\\ExpenseTracker.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-12T07:32:14.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Transactions\\Index.cshtml",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Views\\Transactions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Views\\Transactions\\Index.cshtml",
+              "RelativeToolTip": "ExpenseTracker\\Views\\Transactions\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T06:46:34.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Transaction.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:33:22.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\hoaph\\Downloads\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker\\Models\\Category.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T06:32:36.509Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

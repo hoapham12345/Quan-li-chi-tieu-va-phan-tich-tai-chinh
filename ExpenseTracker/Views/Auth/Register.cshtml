@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Đăng ký";
+}
+<form asp-action="Register" method="post">
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        <label class="form-label">Tên đăng nhập</label>
+        <input name="username" class="form-control" autocomplete="username" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input name="email" type="email" class="form-control" autocomplete="email" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mật khẩu</label>
+        <input name="password" type="password" class="form-control" autocomplete="new-password" />
+    </div>
+    <button class="btn btn-primary me-3">Đăng ký</button>
+    <a class="btn btn-link p-0 align-baseline" href="/Auth/Login">Đã có tài khoản? Đăng nhập</a>
+</form>

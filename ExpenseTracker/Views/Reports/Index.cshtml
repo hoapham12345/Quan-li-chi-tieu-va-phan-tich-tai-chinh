@@ -1,0 +1,184 @@
+﻿@using System.Text.Json
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Báo cáo";
+    var from = (DateTime)ViewBag.From;
+    var to = (DateTime)ViewBag.To;
+
+    decimal total = ViewBag.TotalSpent ?? 0m;
+    decimal budget = ViewBag.Budget ?? 0m;
+    decimal prev = ViewBag.PrevSpent ?? 0m;
+    decimal delta = ViewBag.Delta ?? 0m;
+    decimal? pct = ViewBag.PctChange as decimal?;
+
+    var byCategory = ViewBag.ByCategory as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>();
+    var byDay = ViewBag.ByDay as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>();
+    var topCategories = ViewBag.TopCategories as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>();
+    var topTransactions = ViewBag.TopTransactions as IEnumerable<ExpenseTracker.Models.Transaction> ?? Enumerable.Empty<ExpenseTracker.Models.Transaction>();
+    var insights = ViewBag.Insights as IEnumerable<ExpenseTracker.Models.Insight> ?? Enumerable.Empty<ExpenseTracker.Models.Insight>();
+
+    var jsonOpts = new JsonSerializerOptions { PropertyNamingPolicy = null };
+
+    // fallback: nếu ViewBag null thì tự tính từ total & budget
+    double percentUsed = ViewBag.PercentUsed != null
+        ? Convert.ToDouble(ViewBag.PercentUsed)
+        : (double)(budget == 0 ? 0 : (total / budget * 100m));
+
+    // Chuẩn hóa cho CSS (dùng dấu chấm)
+    var percentCss = percentUsed.ToString("0.##", CultureInfo.InvariantCulture);
+}
+
+<div class="card-sm mb-3 p-3">
+    <form method="get" class="row g-2 align-items-end">
+        <div class="col-auto">
+            <label class="form-label mb-1 fw-bold">Từ ngày</label>
+            <input type="date" class="form-control" name="start" value="@from.ToString("yyyy-MM-dd")" />
+        </div>
+        <div class="col-auto">
+            <label class="form-label mb-1 fw-bold">Đến ngày</label>
+            <input type="date" class="form-control" name="end" value="@to.ToString("yyyy-MM-dd")" />
+        </div>
+        <div class="col-auto">
+            <label class="form-label mb-1 d-block">&nbsp;</label>
+            <button class="btn btn-primary"><i class="bi bi-funnel"></i> Áp dụng</button>
+            <a class="btn btn-outline-secondary"
+               href="@Url.Action("ExportCsv","Reports", new { start = from.ToString("yyyy-MM-dd"), end = to.ToString("yyyy-MM-dd") })">
+                <i class="bi bi-download"></i> Xuất CSV
+            </a>
+        </div>
+    </form>
+    <div class="mt-2 text-muted">
+        <small>
+            Khoảng: <strong>@from.ToString("dd/MM/yyyy")</strong> — <strong>@to.ToString("dd/MM/yyyy")</strong>
+        </small>
+    </div>
+</div>
+
+
+<div class="row g-3 mb-3">
+    <div class="col-md-3">
+        <div class="card-sm"><div class="text-muted">Tổng chi</div><h3>@string.Format("{0:N0} đ", total)</h3></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-sm"><div class="text-muted">Ngân sách kỳ</div><h3>@string.Format("{0:N0} đ", budget)</h3></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-sm">
+            <div class="text-muted">So với kỳ trước</div>
+            <h5 class="mb-0">@string.Format("{0:N0} đ", delta)</h5>
+            <div class="text-muted">@((pct.HasValue ? (pct.Value >= 0 ? "+" : "") + pct.Value.ToString("P0") : "—"))</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-sm">
+            <div class="text-muted">% dùng ngân sách</div>
+            <h3>@percentUsed.ToString("0.0")%</h3>
+            <div class="progress mt-2" style="height:8px;">
+                <div class="progress-bar bg-success" role="progressbar"
+                     style="width:@percentCss%"
+                     aria-valuenow="@percentCss" aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-4">
+        <div class="card-sm">
+            <h5>Phân bổ theo danh mục</h5>
+            <canvas id="catPie" style="max-height:280px"></canvas>
+        </div>
+        <div class="card-sm mt-3">
+            <h6>Top danh mục</h6>
+            <ul class="mb-0">
+                @foreach (var c in topCategories)
+                {
+                    <li>@c.Category: <strong>@string.Format("{0:N0} đ", (decimal)c.Total)</strong></li>
+                }
+                @if (!topCategories.Any())
+                {
+                    <li class="text-muted">Không có dữ liệu.</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card-sm">
+            <h5>Xu hướng chi tiêu theo ngày</h5>
+            <canvas id="dayLine" style="height:340px"></canvas>
+        </div>
+
+        <div class="card-sm mt-3">
+            <h5>Phân tích & Cảnh báo</h5>
+            @if (insights.Any())
+            {
+                <ul class="mb-0">
+                    @foreach (var i in insights)
+                    {
+                        var icon = i.Type switch { "danger" => "❗", "warn" => "⚠️", "success" => "✅", _ => "ℹ️" };
+                        <li class="mb-1"><strong>@icon @i.Title</strong><br /><span class="text-muted">@i.Detail</span></li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <div class="text-muted">Không có cảnh báo trong khoảng đã chọn.</div>
+            }
+        </div>
+    </div>
+
+    <div class="col-12 mt-3">
+        <div class="card-sm">
+            <h5>Top giao dịch</h5>
+            <table class="table">
+                <thead><tr><th>Tên</th><th>Danh mục</th><th>Ngày</th><th class="text-end">Số tiền</th></tr></thead>
+                <tbody>
+                    @foreach (var t in topTransactions)
+                    {
+                        <tr>
+                            <td>@(t.Note ?? "Giao dịch")</td>
+                            <td>@(t.Category?.Name ?? "Khác")</td>
+                            <td>@t.TransactionDate.ToString("yyyy-MM-dd")</td>
+                            <td class="text-end">@string.Format("{0:N0} đ", t.Amount)</td>
+                        </tr>
+                    }
+                    @if (!topTransactions.Any())
+                    {
+                        <tr><td colspan="4" class="text-muted">Không có dữ liệu.</td></tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const byCategory = @Html.Raw(JsonSerializer.Serialize(byCategory, jsonOpts));
+        const byDay = @Html.Raw(JsonSerializer.Serialize(
+        byDay.Select(x => new { Day = ((DateTime)x.Day).ToString("yyyy-MM-dd"), x.Total }), jsonOpts));
+
+        // Pie
+        const catLabels = byCategory.map(x => x.Category ?? "Khác");
+        const catData = byCategory.map(x => x.Total ?? 0);
+        const catCtx = document.getElementById('catPie')?.getContext('2d');
+        if (catCtx && catLabels.length) {
+            new Chart(catCtx, { type: 'doughnut',
+                data: { labels: catLabels, datasets: [{ data: catData }] },
+                options: { plugins: { legend: { position: 'right' } } } });
+        }
+
+        // Line
+        const dayLabels = byDay.map(x => x.Day);
+        const dayData = byDay.map(x => x.Total ?? 0);
+        const dayCtx = document.getElementById('dayLine')?.getContext('2d');
+        if (dayCtx) {
+            new Chart(dayCtx, { type: 'line',
+                data: { labels: dayLabels, datasets: [{ label: 'Chi tiêu', data: dayData, tension: .2, fill: false }] },
+                options: { scales: { y: { beginAtZero: true } } } });
+        }
+    </script>
+}

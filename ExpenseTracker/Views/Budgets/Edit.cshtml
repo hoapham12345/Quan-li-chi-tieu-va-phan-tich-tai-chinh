@@ -1,0 +1,41 @@
+﻿@model ExpenseTracker.Models.Budget
+@{
+    ViewData["Title"] = "Sửa ngân sách";
+}
+
+<h4>Sửa ngân sách</h4>
+<form asp-action="Edit" method="post" class="row g-3">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="BudgetId" />
+
+    <div class="col-md-4">
+        <label class="form-label">Danh mục (để trống = ngân sách tổng)</label>
+        <select asp-for="CategoryId" class="form-select" asp-items="@(ViewBag.Categories as SelectList)">
+            <option value="">— Ngân sách tổng —</option>
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Số tiền</label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-2">
+        <label class="form-label">Từ ngày</label>
+        <input asp-for="StartDate" type="date" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <label class="form-label">Đến ngày</label>
+        <input asp-for="EndDate" type="date" class="form-control" />
+    </div>
+
+    <div class="col-12">
+        <button class="btn btn-primary">Lưu</button>
+        <a class="btn btn-secondary" asp-action="Index">Hủy</a>
+    </div>
+</form>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+ }

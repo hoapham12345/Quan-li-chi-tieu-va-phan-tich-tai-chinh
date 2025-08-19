@@ -1,0 +1,145 @@
+﻿@using System.Text.Json
+@{
+    ViewData["Title"] = "Bảng điều khiển";
+
+    var total = (decimal)(ViewBag.TotalThisMonth ?? 0m);
+    var budget = (decimal)(ViewBag.BudgetAmount ?? 0m);
+
+    var byCategoryDyn = ViewBag.ByCategory as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>();
+    var trendDyn = ViewBag.Trend as IEnumerable<dynamic> ?? Enumerable.Empty<dynamic>();
+    var recent = (ViewBag.Recent as IEnumerable<ExpenseTracker.Models.Transaction>) ?? Enumerable.Empty<ExpenseTracker.Models.Transaction>();
+    var insights = ViewBag.Insights as IEnumerable<ExpenseTracker.Models.Insight> ?? Enumerable.Empty<ExpenseTracker.Models.Insight>();
+
+    var jsonOpts = new JsonSerializerOptions { PropertyNamingPolicy = null };
+}
+
+<div class="row g-3">
+    <!-- CỘT TRÁI: KPI + PHÂN TÍCH -->
+    <div class="col-md-6">
+        <div class="row g-3">
+            <div class="col-6">
+                <div class="card-sm">
+                    <div class="text-muted">Tổng chi tiêu tháng này</div>
+                    <h3>@string.Format("{0:N0} đ", total)</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card-sm">
+                    <div class="text-muted">Ngân sách</div>
+                    <h3>@string.Format("{0:N0} đ", budget)</h3>
+                    <div class="progress mt-2" style="height:8px;">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             style="width:@ViewBag.PercentUsed.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)%"
+                             aria-valuenow="@ViewBag.PercentUsed" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Phân tích & Cảnh báo -->
+            <div class="col-12">
+                <div class="card-sm">
+                    <h5>Phân tích & Cảnh báo</h5>
+                    @if (insights.Any())
+                    {
+                        <ul class="mb-0">
+                            @foreach (var i in insights)
+                            {
+                                var icon = i.Type switch { "danger" => "❗", "warn" => "⚠️", "success" => "✅", _ => "ℹ️" };
+                                <li class="mb-1">
+                                    <strong>@icon @i.Title</strong><br />
+                                    <span class="text-muted">@i.Detail</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-muted">Chưa có cảnh báo nào trong kỳ này.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CỘT PHẢI: BIỂU ĐỒ -->
+    <div class="col-md-6">
+        <div class="card-sm">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>Chi tiêu theo danh mục</h5>
+                    <canvas id="pieChart" style="max-height:220px"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <h5>Xu hướng chi tiêu</h5>
+                    <canvas id="barChart" style="max-height:220px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIAO DỊCH GẦN ĐÂY -->
+    <div class="col-12">
+        <div class="card-sm">
+            <h5>Giao dịch gần đây</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Danh mục</th>
+                        <th>Ngày</th>
+                        <th class="text-end">Số tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var t in recent)
+                    {
+                        <tr>
+                            <td>@(t.Note ?? "Giao dịch")</td>
+                            <td>@(t.Category?.Name ?? "Khác")</td>
+                            <td>@t.TransactionDate.ToString("yyyy-MM-dd")</td>
+                            <td class="text-end">@string.Format("{0:N0} đ", t.Amount)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @if (!recent.Any())
+            {
+                <div class="text-muted">Chưa có giao dịch nào.</div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Dữ liệu từ server
+        const byCategory = @Html.Raw(JsonSerializer.Serialize(byCategoryDyn, jsonOpts));
+        const trend      = @Html.Raw(JsonSerializer.Serialize(trendDyn, jsonOpts));
+
+        // Pie: theo danh mục
+        const labels = byCategory.map(x => x.Category ?? "Khác");
+        const data   = byCategory.map(x => x.Total ?? 0);
+        const pieCtx = document.getElementById('pieChart')?.getContext('2d');
+        if (pieCtx && labels.length) {
+            new Chart(pieCtx, {
+                type: 'doughnut',
+                data: { labels: labels, datasets: [{ data: data }] },
+                options: { plugins: { legend: { position: 'right' } } }
+            });
+        }
+
+        // Bar: xu hướng theo tháng
+        const trendLabels = trend.map(x => `${x.Month}/${x.Year}`);
+        const trendData   = trend.map(x => x.Total ?? 0);
+        const barCtx = document.getElementById('barChart')?.getContext('2d');
+        if (barCtx && trendLabels.length) {
+            new Chart(barCtx, {
+                type: 'bar',
+                data: { labels: trendLabels, datasets: [{ label: 'Chi tiêu', data: trendData }] },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+    </script>
+}
